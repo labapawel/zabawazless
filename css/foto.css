@@ -1,0 +1,92 @@
+@keyframes kolorczerwony {
+  0%,
+  100% {
+    border: 1px solid #00ffff;
+    box-shadow: 1px 1px 15px #ffffff;
+    padding: 5px;
+  }
+  50% {
+    border: 1px solid #ff0000;
+    box-shadow: 1px 1px 15px #ffffff;
+    padding: 5px;
+  }
+}
+@keyframes akolorczerwony {
+  0% {
+    border: 1px solid #7f00ff;
+    box-shadow: 1px 1px 15px #ffffff;
+    padding: 5px;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.foto {
+  text-decoration: none;
+}
+.foto img.czerwony {
+  animation-name: kolorczerwony;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.foto img.czerwony.mini {
+  width: auto;
+  height: 150px;
+}
+.foto img.czerwony.mini:hover {
+  border: 1px solid #006666;
+  box-shadow: 1px 1px 15px #b3b3b3;
+  animation-name: akolorczerwony;
+}
+.foto img.czerwony.zaok {
+  border-radius: 5px;
+}
+.foto img.czerwony:hover {
+  border: 1px solid #00ffff;
+  box-shadow: 1px 1px 15px #ffffff;
+  animation-name: akolorczerwony;
+}
+.foto img.zielony {
+  animation-name: kolorczerwony;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.foto img.zielony.mini {
+  width: auto;
+  height: 150px;
+}
+.foto img.zielony.mini:hover {
+  border: 1px solid #660066;
+  box-shadow: 1px 1px 15px #b3b3b3;
+  animation-name: akolorczerwony;
+}
+.foto img.zielony.zaok {
+  border-radius: 5px;
+}
+.foto img.zielony:hover {
+  border: 1px solid #ff00ff;
+  box-shadow: 1px 1px 15px #ffffff;
+  animation-name: akolorczerwony;
+}
+.foto img.niebieski {
+  animation-name: kolorczerwony;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.foto img.niebieski.mini {
+  width: auto;
+  height: 150px;
+}
+.foto img.niebieski.mini:hover {
+  border: 1px solid #666600;
+  box-shadow: 1px 1px 15px #b3b3b3;
+  animation-name: akolorczerwony;
+}
+.foto img.niebieski.zaok {
+  border-radius: 5px;
+}
+.foto img.niebieski:hover {
+  border: 1px solid #ffff00;
+  box-shadow: 1px 1px 15px #ffffff;
+  animation-name: akolorczerwony;
+}

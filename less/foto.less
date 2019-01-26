@@ -1,0 +1,87 @@
+ .keyframes(@nazwa; @wart) 
+ {
+        @keyframes @nazwa {@wart();}
+ }
+    
+.kolor_animacji(@kolorramki; @kolorcienia; @padding )
+{
+    0%, 100% {        
+            border:1px solid spin(@kolorramki,180);
+            box-shadow: 1px 1px 15px spin(@kolorcienia,180);
+            padding: @padding;
+    }
+    
+    
+    50% {   border:1px solid @kolorramki;
+            box-shadow: 1px 1px 15px @kolorcienia;
+            padding: @padding;
+    }
+}
+.obrot_animacji(@kolorramki; @kolorcienia; @padding )
+{
+    0% {        
+            border:1px solid spin(@kolorramki,180);
+            box-shadow: 1px 1px 15px spin(@kolorcienia,180);
+            padding: @padding;
+    }
+    
+    
+    100% {   
+            transform: rotate(360deg);
+    }
+}
+ 
+ .keyframes(kolorczerwony, {.kolor_animacji(#ff0000; lighten(#ff0000, 50%); 5px)});
+ .keyframes(akolorczerwony, {.obrot_animacji(spin(#ff0000, 90); spin(lighten(#ff0000, 50%), 90); 5px)});
+
+
+.szablon_foto(@kolorramki; @kolorcienia; @padding; @animacja; @aanimacja)
+{
+ animation-name: @animacja;
+ animation-duration: 5s;
+ animation-iteration-count: infinite;   
+
+
+    
+    &.mini {
+        width: auto;
+        height: 150px;
+        
+        &:hover {
+        border:1px solid darken(spin(@kolorramki,180),30%);
+        box-shadow: 1px 1px 15px darken(spin(@kolorcienia,180),30%);
+        animation-name: @aanimacja;
+        }
+    }
+
+    &.zaok {
+        border-radius: 5px;
+    }
+    
+    &:hover {
+    border:1px solid spin(@kolorramki,180);
+    box-shadow: 1px 1px 15px spin(@kolorcienia,180);
+        animation-name: @aanimacja;
+        
+    }
+}
+
+
+.foto{
+
+    text-decoration:none;
+    
+    
+    img{
+    &.czerwony{
+        .szablon_foto(#ff0000; lighten(#ff0000, 50%); 5px; kolorczerwony;akolorczerwony)
+        }
+    
+    &.zielony{
+        .szablon_foto(#00ff00; lighten(#00ff00, 50%); 5px; kolorczerwony;akolorczerwony)
+        }
+    &.niebieski{
+        .szablon_foto(#0000ff; lighten(#0000ff, 50%); 5px; kolorczerwony;akolorczerwony)
+        }
+    }
+}

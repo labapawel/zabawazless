@@ -1,0 +1,13 @@
+.container-message {
+  clear: both;
+}
+.container-message.right > div {
+  float: right;
+}
+.container-message > div {
+  width: 50%;
+  float: left;
+}
+.container-message > .container-content {
+  text-align: justify;
+}
